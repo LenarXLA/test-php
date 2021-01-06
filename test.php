@@ -21,7 +21,7 @@ $leadsContacts = $apiClient->contacts();
 $leadsTasks = $apiClient->tasks();
 
 // Если у контакта нет сделок
-if (get(BaseEntityFilter $filter = null, array $leadsContacts = _embedded[leads]) == 0 || null) {
+if (get(BaseEntityFilter $filter = null, array $leadsContacts = _embedded[leads]) == null) {
   // Создадим коллекцию полей сущности
   $leadCustomFieldsValues = new CustomFieldsValuesCollection();
 
